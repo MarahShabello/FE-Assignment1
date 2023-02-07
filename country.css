@@ -1,0 +1,140 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #fafafa;
+}
+.back-btn{
+    display: block;
+    margin: 60px;
+    font-family: NunitoSans-Regular;
+    padding: 10px 40px;
+    border: none;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 1px 1px 6px 1px #cccccc;
+    /*width: 30%;*/
+}
+
+.back-icon{
+    margin-right: 8px;
+}
+
+.details{
+    display: flex;
+    padding: 0 65px;
+}
+
+.flag{
+    width: 42%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.country-name{
+    font-size: 30px;
+    font-family: NunitoSans-ExtraBold;
+    display: block;
+}
+
+.info-firstCol{
+    margin-right: 180px;
+}
+
+.info {
+    text-align: left;
+    list-style-type: none;
+    font-size: 16px;
+    margin-left: 0;
+    color: #111517;
+    padding: 0;
+    display: inline-block;
+}
+
+.info li{
+    padding-bottom: 6px;
+}
+
+.details-col1 {
+    display: inline;
+    font-family: NunitoSans-Bold;
+}
+.details-col2 {
+    display: inline;
+    font-family: NunitoSans-Regular;
+}
+
+.details-div{
+    display: block;
+    margin-left: 120px;
+}
+
+.country-info{
+    display: flex;
+}
+
+.border-div{
+    margin-top: 80px;
+}
+
+.border-countries{
+    display: inline;
+    font-family: NunitoSans-Bold;
+    margin-left: 20px;
+    font-size: 16px;
+}
+.border-btns{
+    display: inline;
+    margin-left: 20px;
+}
+
+.border{
+    font-family: NunitoSans-Regular;
+    font-size: 14px;
+    background-color: #fff;
+    border: none;
+    box-shadow: 1px 1px 1px 2px #eee;
+    border-radius: 2px;
+    margin-right: 10px;
+    width: 100px;
+    text-align: center;
+    padding: 5px;
+}
+
+@media (max-width: 600px){
+    .border-countries{
+        display: block;
+    }
+    .flag{
+        width: 400px;
+        object-fit: cover;
+        height: 250px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .country-name{
+        display: block;
+        margin-left: -30px;
+    }
+    .details{
+        display: inline-block;
+        /*margin-left: -20px;*/
+    }
+    .country-info{
+        display: block;
+        margin-left: -30px;
+    }
+    .details-div{
+        margin-left: 0;
+    }
+    .border-div{
+        margin-top: 20px;
+        margin-left: -20px;
+    }
+    .border-btns{
+        display: block;
+        margin-left: 20px;
+        margin-bottom: 50px;
+    }
+}
