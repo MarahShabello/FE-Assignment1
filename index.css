@@ -33,23 +33,23 @@ Dark Grey: #858585
 Very Light Grey: #fafafa
 */
 
-/** {*/
-/*    box-sizing: border-box;*/
-/*    !*font-family: 'Nunito Sans', sans-serif;*!*/
-/*}*/
 * {
     box-sizing: border-box;
+    --const: 60px;
+}
+
+.page{
+    width: 100%;
 }
 
 body {
     background-color: #fafafa;
-    /*display: block;*/
     margin: 0;
     align-content: center;
     align-items: center;
     color: #111517;
-
 }
+
 header {
     font-family: NunitoSans-Black;
     width: 100%;
@@ -57,9 +57,8 @@ header {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     display: flex;
     align-items: center;
-    padding: 0 60px;
+    padding: 0 var(--const);
     justify-content: space-between;
-    /*font-weight: 900;*/
 }
 
 .dark-mode {
@@ -78,7 +77,7 @@ header {
     display: flex;
     justify-content: space-between;
     margin: 20px 0;
-    padding: 0 60px;
+    padding: 0 var(--const);
 }
 
 .search {
@@ -95,22 +94,20 @@ header {
 
 .container{
     width: 100%;
-    padding: 0 20px;
+    padding: 0 var(--const);
     display: grid;
-    /*grid-template-columns: repeat(4, 1fr);*/
     grid-template-columns: repeat(4, minmax(calc(25% - 80px), 1fr));
-    grid-template-rows: auto;
+    grid-template-rows: fit-content(40%);
     grid-gap: 5rem;
     max-width: 1440px;
     margin: 40px auto;
 }
 .box{
     width: 100%;
-    height: max-content;
+    height: 100%;
     border: none;
     background: #fff;
     border-radius: 10px;
-    /*margin: 20px 40px;*/
     text-align: left;
     padding-bottom: 30px;
     box-shadow: 1px 1px 10px 1px #eee;
@@ -130,7 +127,7 @@ a{
 .country-name{
     font-family: NunitoSans-ExtraBold;
     text-align: left;
-    padding-left: 20px;
+    padding: 0 20px 0 20px;
     font-size: 18px;
 }
 
@@ -152,8 +149,6 @@ a{
     display: inline;
     font-family: NunitoSans-Light;
 }
-
-
 
 /*--------------DROP DOWN LIST-----------------*/
 .dropdown-btn {
@@ -209,7 +204,7 @@ a{
 }
 
 
-@media (max-width: 600px){
+@media only screen and (max-width: 600px){
     .search-bar{
         display: block;
     }
@@ -220,20 +215,21 @@ a{
     }
     .search{
         display: block;
-        width: 90%;
+        width: 100%;
         margin-left: auto;
         margin-right: auto;
     }
     .box{
-        width: 100%;
+        width: 80%;
+        margin: 0 auto;
     }
     .country-info{
         font-size: 16px;
-        padding: 0 0 0 30px;
+        padding: 0 18px 0 18px;
     }
     .country-name{
         font-size: 20px;
-        padding-left: 30px;
+        padding: 0 18px 0 18px;
     }
     .box img{
         height: 200px;
@@ -242,13 +238,85 @@ a{
     header{
         width: 100%;
     }
-    /*.container{*/
-    /*    grid-template-columns: repeat(2, 1fr);*/
-    /*}*/
-    /*nav{*/
-    /*    width: 600px;*/
-    /*}*/
-    /*nav p{*/
-    /*    font-size: 14px;*/
-    /*}*/
+    .container{
+        grid-template-columns: repeat(1, minmax(calc(80% - 80px), 1fr));
+    }
+}
+
+@media only screen and (max-width: 800px) and (min-width: 600px){
+    .search-bar{
+        display: block;
+    }
+    .dropdown-list{
+        display: block;
+        margin-top: 40px;
+        margin-left: 25px;
+    }
+    .search{
+        display: block;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .box{
+        width: 100%;
+        margin: 0 auto;
+    }
+    .country-info{
+        font-size: 16px;
+        padding: 0 15px 0 15px;
+    }
+    .country-name{
+        font-size: 18px;
+        padding: 0 15px 0 15px;
+    }
+    .box img{
+        height: 200px;
+        object-fit: cover;
+    }
+    header{
+        width: 100%;
+    }
+    .container{
+        grid-template-columns: repeat(2, minmax(calc(50% - 80px), 1fr));
+    }
+}
+
+
+@media only screen and (max-width: 1000px) and (min-width: 801px){
+    .search-bar{
+        display: block;
+    }
+    .dropdown-list{
+        display: block;
+        margin-top: 40px;
+        margin-left: 25px;
+    }
+    .search{
+        display: block;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .box{
+        width: 100%;
+    }
+    .country-info{
+        font-size: 14px;
+        padding: 0 15px 0 15px;
+    }
+    .country-name{
+        font-size: 16px;
+        padding: 0 15px 0 15px;
+    }
+    .box img{
+        height: 200px;
+        object-fit: cover;
+    }
+    header{
+        width: 100%;
+    }
+    .container{
+        grid-template-columns: repeat(3, minmax(calc(33% - 80px), 1fr));
+    }
 }
